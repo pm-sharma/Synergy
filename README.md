@@ -1,2 +1,2 @@
 # Synergy 
-Frontend of Devspace Hackathon Project
+Frontend for Devspace Hackathon Project
