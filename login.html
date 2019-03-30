@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Login | Sign in</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
+
+<style>
+        body {
+            margin : 0;
+            width: 100vw;
+            height: 100vh;
+            /* background:grey; */
+            /* overflow: hidden; */
+            font-family: 'Muli', sans-serif;
+        }
+        .main {
+            text-align : center;
+            height: 45vh;
+            width: 25vw;
+            margin : auto auto;
+            /* background-color: white; */
+            top: 15vh;
+            position: relative;
+            padding : 20px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11);
+        }
+        .top {
+            margin : 60px 0 40px 0;
+        }
+        .second {
+            margin : 40px 0 80px 0;
+        }
+        button {
+            height: 50px;
+            width: 10vw;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 15px 30px 0 rgba(189,89,215,0.25);
+            text-align: center;
+            background-color:red;
+            color : white;
+        }
+        input {
+            height: 50px;
+            width: 20vw;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 5px 30px 0 rgba(0,0,0,0.11);
+            text-align: center;
+            font-size: 15px;
+            color : #4c2a52;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active  {
+            -webkit-box-shadow: 0 0 0 30px white inset;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+        button, button:focus {
+            outline: none;
+            border: 0;
+            cursor: pointer;
+        }
+        ::placeholder{
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            color : #4c2a52;
+            font-family: 'Muli', sans-serif;
+        }
+        h2 {
+            color: #4c2a52;
+            margin: 0px;
+        }
+        .box {
+            margin-top: -30px;
+        }
+        .display {
+            margin-top: -40px;
+        }
+
+        .blue-circle{
+            background-color:blue;
+            height: 100px;
+            width:100px;
+            border-radius: 50%;
+            position:absolute;
+            z-index: 2;
+            top:-30%;
+            left: -30%;
+            animation: bluecircle .4s ease-out .5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes bluecircle{
+            0%{
+                top:-30%;
+                left: -30%;
+                opacity: 0;
+            }
+            80%{
+                top: 16%;
+                left: 35%;
+                opacity: 0.3;
+            }
+            100%{
+                top: 15%;
+                left: 33%;
+                opacity: 0.3;
+            }
+        }
+
+        .red-circle{
+            background-color:greenyellow;
+            height: 150px;
+            width:150px;
+            border-radius: 50%;
+            position:absolute;
+            top:-20%;
+            left:-30%;
+            animation: redcircle .4s ease-out .5s forwards;
+            opacity: 0;
+        }
+        @keyframes redcircle{
+            0%{
+                top:-20%;
+                left: -30%;
+                opacity: 0;
+            }
+            80%{
+                top: 26%;
+                left: 45%;
+                opacity: 0.3;
+            }
+            100%{
+                top: 24%;
+                left: 43%;
+                opacity: 0.3;
+            }
+        }
+
+        .yellow-circle{
+            background-color:yellow;
+            height: 200px;
+            width:200px;
+            border-radius: 50%;
+            position:absolute;
+            top:50%;
+            right:-30%;
+            animation: yellowcircle .4s ease-out .5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes yellowcircle{
+            0%{
+                top:-20%;
+                right: -30%;
+                opacity: 0;
+            }
+            80%{
+                top: 45%;
+                right: 34%;
+                opacity: 0.3;
+            }
+            100%{
+                top: 44%;
+                right: 32%;
+                opacity: 0.3;
+            }
+        }
+
+
+</style>
+
+</head>
+<body>
+        
+    <div class="blue-circle">
+    </div>
+    
+    <div class="red-circle">
+    </div>
+
+    <div class="yellow-circle">
+    </div>
+
+    <div class="main">
+        <h2>Login</h2>
+
+        <div class="box">
+            <form method="POST" oninvalid="false">
+
+                <div class="top">
+                    <input type="text" name="username" placeholder="username" required>
+                </div>
+
+                <div class="second">
+                    <input type="password" name="password" placeholder="password">
+                </div>
+
+                <div class="display">
+                    <button type="submit" name="action"><b>SUBMIT</b></button>
+                </div>
+            </form>
+          </div>
+    </div>
+
+</body>
+
+
+</html>
