@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Editor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+#popup{
+        display: none;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        z-index: 20;
+     }
+
+.confirmbtn1{
+            height: 50px;
+            text-align: center;
+            width: 180px;
+            line-height: 50px;
+            margin-top: -20px;
+            display: inline-block;
+            margin-bottom: 0%;
+            background-color: #FF0D2A;
+            margin-left:-20px;
+            color: white
+            border-radius:2px; 
+        }
+.confirmbtn2{
+            height: 50px;
+            color: white;
+            text-align: center;
+            border-radius:2px; 
+            width: 180px;
+            line-height: 50px;
+            margin-top: -20px;
+            display: inline-block;
+            margin-bottom: 0%;
+            background-color: #0084FF;
+            margin-left:20px;             
+         }
+.dimmer{
+             z-index: 9;
+             position: fixed;
+             top: 0px;
+             left: 0px;
+             height: 100vh;
+             width: 100vw;
+             display: none;
+             background-color:#fcfcfc;
+             opacity: 0.4;
+         }
+
+</style>
+
+
+</head>
+
+<body>
+
+    <div id="users" class="box">
+        <div class="icon">
+        </div>
+        <div class="icon">
+        </div>
+        <div class="icon">
+        </div>
+    </div>
+    <div id="right">
+        <div id="header" class="box">
+            Project Name
+            <div id="signout" class="box">
+                Sign Out
+            </div>
+        </div>
+        <div id="treeparent">
+            <div id="treeitem" class="box">
+                Directory
+            </div>
+            <div id="treeitem" class="box">
+                Directory
+            </div>
+            <div>
+                <div id="treeline"></div>
+                <div id="treeitem" class="box treeitem-subelement">
+                    Directory
+                </div>
+            </div>
+            <div>
+                <div id="treeline"></div>
+                <div id="treeitem" class="box treeitem-subelement">
+                    Directory
+                </div>
+            </div>
+            <div id="treeitem" class="box">
+                Directory
+            </div>
+
+            <button id ="treeitem" style="display:block;width:90px; height:30px;" onclick="document.getElementById('getFile').click()">Upload File</button>
+            <input type='file' id="getFile" style="display:none">
+
+        </div>
+        <div id="subright">
+            <div id="tabparent">
+                <div id="tab" class="box">
+                    Project Name
+                </div>
+                <div id="tab" class="box active">
+                    Project Name
+                </div>
+                <div id="tab" class="box">
+                    Project Name
+                </div>
+                <div id="tab" class="box">
+                    Project Name
+                </div>
+            </div>
+            <div id="lol">
+                <pre id="editor">x = 1
+        if x == 1:
+            # indented four spaces
+            print("x is 1.")</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup code -->
+
+    <div class="dimmer"></div>
+    
+    <div id="popup">
+        <h1 style="text-align: center;padding-top: 10px">User Requested to logout </h1>
+        
+        <div style="display: flex;padding-top: 59.7px">    
+            <div id="cancel" class="confirmbtn1"><b><i class="fa fa-close"></i> Decline</b></div>
+            <div id="ok" class="confirmbtn2"><b><i class="fa fa-check"></i>All logout</b></div>
+        </div>
+
+    </div>
+
+    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setFontSize(14);
+        editor.setTheme("ace/theme/chrome");
+        editor.session.setMode("ace/mode/python");
+
+        $(document).ready(function() {
+            $("#signout").click(function(){
+                $('.dimmer').fadeIn();
+                $("#popup").fadeIn();
+                $("#ok").click(function(){
+                    $('.dimmer').fadeOut();
+                    $("#popup").fadeOut();
+                    $("#popup").css("disp
+                    lay", "none");    
+                    $("#whole").css({'opacity':'1','pointer-events': 'auto'});
+                })
+            })
+        })
+
+        fetch(https://codespace.readthedocs.)
+  .then((resp) => resp.json()) // Transform the data into json
+  .then(function(data) {
+    // Create and append the li's to the ul
+    })
+  })
+
+
+</script>
+
+</body>
+
+</html>

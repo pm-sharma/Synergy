@@ -1,0 +1,136 @@
+body {
+    /*overflow: hidden;*/
+    display: inline-block;
+    padding: 1vw;
+    background-color: #FAFAFA;
+}
+
+#editor {
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Muli';
+    background-color: #fff;
+}
+
+#header {
+    width: 90vw;
+    text-align: left;
+    padding: 2vh 1vw;
+    display: inline-block;
+    margin-left: 0.8vw;
+    vertical-align: top;
+    font-weight: 700;
+    height: 3.5vh;
+    line-height: 3.5vh;
+    margin-bottom: 2vh;
+}
+
+#signout{
+    background-color: #FF0D2A;
+    width: 6vw;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    float: right;
+    height: 3.5vh;
+    line-height: 3.5vh;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 1px 1px 2px 0.5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#users {
+    width: 3.5vw;
+    height: 92vh;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.icon {
+    width: 2.5vw;
+    background-color: aqua;
+    height: 2.5vw;
+    border-radius: 4vw;
+    margin: 1vh auto;
+}
+
+.active{
+    background-color: #0084FF;
+    color: #fff;
+}
+
+#lol {
+    height: 60vh;
+    width: 80vw;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1vw;
+    padding-top: 1vh;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#right {
+    display: inline-block;
+    vertical-align: top;
+    width: 80vw;
+    ;
+}
+
+#treeparent {
+    width: 12vw;
+    display: inline-block;
+}
+
+#treeitem {
+    width: 60%;
+    height: 3vh;
+    margin: 1vw;
+    line-height: 3vh;
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+#treeline{
+    width: 3vw;
+    background-color: #0084FF;
+    height: 0.3vh;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 1.5vh;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: -1;
+    margin-left: 0.8vw;
+}
+
+.treeitem-subelement{
+    margin-left: 2vw !important;
+}
+
+#subright {
+    display: inline-block;
+    width: 50vw;
+    vertical-align: top;
+    margin-top: 2vh;
+}
+#tabparent {
+    width: 50vw;
+    display: inline-block;
+}
+#tab{
+    width: auto;
+    height: 3.5vh;
+    display: inline-block;
+    margin-right: 1vw;
+    padding: 0 1.5vw 0 1.5vw; 
+    font-size: 0.8em;
+    line-height: 3.5vh;
+}

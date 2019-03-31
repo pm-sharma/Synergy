@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Popup</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+<style>
+
+
+#popup{
+        display: none;
+        width: 300px;
+        border-radius: 25px; 
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        height: 162px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        position: absolute;
+        z-index: 20;
+        background-color: #f2f3f4;
+        z-index: 10;
+        
+     }
+.confirmbtn{
+            height: 50px;
+            text-align: center;
+            width: 150px;
+            line-height: 50px;
+            margin-top: -20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 0%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+         }
+
+.confirmbtn:hover{
+            background-color: #1574C5;
+         }
+
+         .dimmer{
+             z-index: 9;
+             position: fixed;
+             top: 0px;
+             left: 0px;
+             height: 100vh;
+             width: 100vw;
+             background: black;
+             opacity: 0.8;
+             display: none;
+         }
+
+</style>
+
+<body>
+    <div id="whole">gsieun</div>
+    <button id="clickPopup">Display</button>
+    
+    <div class="dimmer"></div>
+    <div id="popup">
+        <h3 style="text-align: center;padding-top: 10px">Do you want to logout ?</h3>
+        
+        <div style="display: flex;padding-top: 59.7px">    
+            <div id="cancel" class="confirmbtn1"><b>Decline</b></div>
+            <div id="ok" class="confirmbtn2"><b>All logout</b></div>
+        </div>
+
+    </div>
+
+<script>
+
+$(document).ready(function() {
+    $("#clickPopup").click(function(){
+        $('.dimmer').fadeIn();
+        $("#popup").fadeIn();
+        $("#ok").click(function(){
+            $('.dimmer').fadeOut();
+            $("#popup").fadeOut();
+            $("#popup").css("display", "none");    
+            $("#whole").css({'opacity':'1','pointer-events': 'auto'});
+    	})
+    })
+})
+
+
+</script>
+</body>
+</html>
